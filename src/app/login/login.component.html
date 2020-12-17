@@ -1,0 +1,33 @@
+<form #loginForm="ngForm">
+  Email :
+  <input
+    ngModel
+    email
+    required
+    name="email"
+    type="email"
+    class="form-control"
+  />
+  password :
+  <input
+    type="password"
+    required
+    ngModel
+    name="password"
+    minlength="4"
+    class="form-control"
+  />
+  <!-- <div
+  *ngIf="errorMessage.length"
+  class="alert alert-danger">
+  {{errorMessage}}
+</div> -->
+
+  <button
+    [disabled]="loginForm.invalid"
+    (click)="login(loginForm)"
+    class="btn btn-success mt-2"
+  >
+    Login
+  </button>
+</form>

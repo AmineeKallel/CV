@@ -1,0 +1,6 @@
+<ul class="list-group">
+  <app-item
+    [odd]="isOdd"
+    *ngFor="let itemPersonne of personnes; let isOdd = odd"
+    [personne]="itemPersonne"></app-item>
+</ul>

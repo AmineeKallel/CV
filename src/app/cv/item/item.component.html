@@ -1,0 +1,16 @@
+<li
+[ngClass]="{
+  'list-group-item-danger': odd,
+  'list-group-item-warning': !odd
+}"
+(click)="selecteItem()"
+class="list-group-item">
+  <img
+   src="assets/images/{{personne.path|defaultImage}}"
+   width="50px"
+   height="50px"
+   class="rounded-circle"
+  >
+  {{personne.name}}
+  {{personne.firstname}}
+</li>
